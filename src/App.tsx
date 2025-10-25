@@ -1,5 +1,11 @@
+import { Navbar } from "./components";
+
 function App() {
-  return <div>Hello World</div>;
+  return (
+    <div className="text-red-700">
+      <Navbar />
+    </div>
+  );
 }
 
 export default App;
