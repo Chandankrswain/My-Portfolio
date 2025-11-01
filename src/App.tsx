@@ -1,11 +1,9 @@
 import { Navbar } from "./components";
 
-function App() {
+export default function App() {
   return (
-    <div className="text-red-700">
+    <div className="relative w-screen h-screen overflow-hidden">
       <Navbar />
     </div>
   );
 }
-
-export default App;

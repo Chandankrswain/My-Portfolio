@@ -7,4 +7,6 @@
 
 body {
   font-family: var(--font-jetbrains);
+  background-color: #141414;
+  color: #f2f2f2;
 }

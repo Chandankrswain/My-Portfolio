@@ -1,0 +1,124 @@
+{
+  "help": {
+    "description": "List of all available commands in the terminal.",
+    "commands": {
+      "help": "Show all available commands.",
+      "about": "Display information about Chandan Kumar Swain.",
+      "projects": "List all major frontend projects with links.",
+      "skills": "Show technical and professional skills.",
+      "experience": "Show work and project experience.",
+      "education": "Show academic qualifications.",
+      "contact": "Display contact and social profiles.",
+      "clear": "Clear the terminal screen."
+    }
+  },
+  "about": {
+    "name": "Chandan Kumar Swain",
+    "location": "New Delhi, India",
+    "summary": "Self-motivated Frontend Developer skilled in React.js, TypeScript, and Tailwind CSS. Transitioned from a 4-year career in finance, combining analytical and creative skills to build intuitive and high-performance web applications. Currently expanding into backend development to become a full-stack engineer.",
+    "currentFocus": "Learning Node.js and Express to strengthen backend development skills.",
+    "portfolioTagline": "Turning logic into interactive user experiences."
+  },
+  "projects": [
+    {
+      "name": "Navi Delhi Metro",
+      "description": "Interactive metro planner that finds the shortest route or minimum interchange between stations using real-time API data.",
+      "technologies": [
+        "React.js",
+        "Tailwind CSS",
+        "REST API"
+      ],
+      "live": "https://navi-delhi-metro.vercel.app/",
+      "github": "https://github.com/Chandankrswain"
+    },
+    {
+      "name": "Type-Z",
+      "description": "Typing speed and accuracy tracker that measures WPM, accuracy, and error rate in real-time.",
+      "technologies": [
+        "React.js",
+        "Tailwind CSS",
+        "Redux"
+      ],
+      "live": "https://type-z.vercel.app/",
+      "github": "https://github.com/Chandankrswain"
+    },
+    {
+      "name": "Wordio",
+      "description": "Smart dictionary and translator app supporting OCR, speech-to-text, and multilingual translation.",
+      "technologies": [
+        "React.js",
+        "Tailwind CSS",
+        "Tesseract.js"
+      ],
+      "live": "https://wordio-omega.vercel.app/",
+      "github": "https://github.com/Chandankrswain"
+    }
+  ],
+  "skills": {
+    "languages": [
+      "JavaScript (ES6+)",
+      "TypeScript"
+    ],
+    "frameworks": [
+      "React.js",
+      "Redux"
+    ],
+    "styling": [
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Styled Components"
+    ],
+    "tools": [
+      "Vite",
+      "Git",
+      "Postman",
+      "Vercel",
+      "Chrome DevTools"
+    ],
+    "learning": [
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Frontend Developer",
+      "company": "Self Projects / Freelance",
+      "period": "2023 \u2013 Present",
+      "details": [
+        "Developed and deployed 3+ web apps demonstrating responsive UI and API integration.",
+        "Focused on clean component design and efficient state management."
+      ]
+    },
+    {
+      "title": "Backend Operations Executive",
+      "company": "First India Group \u2013 Channel Partner (Banks and NBFCs)",
+      "period": "Aug 2020 \u2013 Present",
+      "details": [
+        "Processed and verified loan applications ensuring 100% compliance.",
+        "Maintained data integrity and coordinated with clients and branch teams."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Computer Application (MCA)",
+      "institution": "IGNOU, Delhi",
+      "year": "2021 \u2013 2024"
+    },
+    {
+      "degree": "Bachelor of Computer Application (BCA)",
+      "institution": "Guru Gobind Singh Indraprastha University, Delhi",
+      "year": "2016 \u2013 2019"
+    }
+  ],
+  "contact": {
+    "email": "mr.chandanswain@gmail.com",
+    "phone": "+91-9599548212",
+    "linkedin": "https://linkedin.com/in/chandan-kumar-swain-3b6674141",
+    "github": "https://github.com/Chandankrswain",
+    "resume": "Chandan Kumar Swain - Resume.pdf"
+  }
+}
