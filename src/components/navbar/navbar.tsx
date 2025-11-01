@@ -9,7 +9,7 @@ export const Navbar = () => {
         <Time />
       </h2>
       <img className="mr-6" src={menudots} alt="Logo" width={60} height={60} />
-      <Button />
+      <Button title="Resume" />
     </div>
   );
 };
