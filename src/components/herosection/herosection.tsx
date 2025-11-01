@@ -22,11 +22,12 @@ export const HeroSection = () => {
         </div>
       </div>
       <div className="flex justify-between p-10">
-        <p className="text-md font-thin p-10 text-[#ababab]">
+        <p className="text-xl font-light p-6 text-white">
           &gt; BASED IN INDIA, NEW DELHI
         </p>
-        <p className="text-md font-thin p-10 text-[#ababab]">
-          &gt; FRONT END DEVELOPER
+        <p className="text-xl font-light  p-6 text-white">
+          &gt; FRONT END DEVELOPER{" "}
+          <span className="text-[#ababab]">+ WEB DEVELOPER</span>
         </p>
       </div>
     </div>
