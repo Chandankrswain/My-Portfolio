@@ -10,13 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-three/drei": "^10.7.6",
+    "@react-three/drei": "^9.74.0",
     "@react-three/fiber": "^9.4.0",
+    "@readyplayerme/react-avatar-creator": "^0.5.0",
+    "@readyplayerme/visage": "^6.16.0",
     "@tailwindcss/vite": "^4.1.16",
     "framer-motion": "^12.23.24",
+    "postprocessing": "^6.34.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "three": "^0.180.0"
+    "three": "^0.152.2",
+    "util": "^0.12.5",
+    "vite-plugin-node-polyfills": "^0.24.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

@@ -3,7 +3,7 @@ import online from "../../assets/online.svg";
 
 export const HeroSection = () => {
   return (
-    <div className="flex flex-col h-[90%] justify-between">
+    <div className="flex flex-col h-[780px] justify-between">
       <Navbar />
       <div className="flex flex-col justify-center items-center">
         <h4 className="flex">
