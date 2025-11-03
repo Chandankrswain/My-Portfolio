@@ -1,5 +1,5 @@
-import { Navbar } from "../navbar";
 import online from "../../assets/online.svg";
+import { Navbar } from "../../components";
 
 export const HeroSection = () => {
   return (

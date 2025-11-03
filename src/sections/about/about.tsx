@@ -1,9 +1,8 @@
-import { AvatarModel } from "../avatarmodel";
-import { Button } from "../button";
+import { AvatarModel, Button } from "../../components";
 
-export const Banner = () => {
+export const About = () => {
   return (
-    <div className="h-full flex w-full flex justify-center items-center">
+    <div className="h-full flex w-full justify-center items-center mb-48 mt-20">
       <AvatarModel />
       <div className="flex flex-col">
         <p className="text-4xl font-extrabold tracking-widest">
@@ -22,4 +21,4 @@ export const Banner = () => {
   );
 };
 
-export default Banner;
+export default About;
