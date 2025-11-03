@@ -16,7 +16,6 @@ export function AvatarModel() {
           <ambientLight intensity={1} />
           <directionalLight position={[0, 5, 5]} intensity={2} />
           <Environment preset="sunset" />
-
           <Model />
         </Canvas>
       </div>
