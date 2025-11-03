@@ -12,7 +12,7 @@ function Model() {
 
 export function AvatarModel() {
   return (
-    <div className="w-[700px] h-[500px] bg-[url(./assets/background.svg)] relative bg-cover rounded-4xl m-10 flex flex-col ">
+    <div className="w-[700px] h-[500px] bg-[url(./assets/background.svg)] relative bg-cover [clip-path:polygon(100px_0%,100%_0%,100%_calc(100%-100px),calc(100%-100px)_100%,0%_100%,0%_100px)] m-10 flex flex-col ">
       <Canvas camera={{ position: [0, 0, 3] }}>
         <ambientLight intensity={1} />
         <directionalLight position={[0, 5, 5]} intensity={2} />
@@ -20,7 +20,7 @@ export function AvatarModel() {
         <OrbitControls />
         <Model />
       </Canvas>
-      <p className="p-8 absolute top-1 left-2 text-sm text-[#adadad]">
+      <p className="p-8 absolute bottom-1 left-2 text-sm text-[#adadad]">
         &gt; INTERACTIVE MODEL
       </p>
     </div>
