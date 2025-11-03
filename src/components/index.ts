@@ -5,3 +5,4 @@ export * from "./localtime";
 export * from "./herosection";
 export * from "./avatarmodel";
 export * from "./banner";
+export * from "./quotes";

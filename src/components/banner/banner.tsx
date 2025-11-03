@@ -1,12 +1,22 @@
 import { AvatarModel } from "../avatarmodel";
+import { Button } from "../button";
 
 export const Banner = () => {
   return (
-    <div className="h-full flex w-full ">
+    <div className="h-full flex w-full flex justify-center items-center">
       <AvatarModel />
-      <div className="flex flex-col  ">
-        <p className="text-2xl font-bold">ABOUT ME</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div className="flex flex-col">
+        <p className="text-4xl font-extrabold tracking-widest">
+          <span className="text-[#adadad]"> &gt;</span> ABOUT
+        </p>
+        <p className="w-[620px] text-xl font-thin mb-6 m-2 text-[#adadad] leading-11">
+          A FRONTEND DEVELOPER WHO LOVES CREATING MODERN AND INTERACTIVE WEB
+          EXPERIENCES. WITH A BACKGROUND IN FINANCE I BRING A STRONG FOCUS ON
+          DETAIL AND PROBLEM SOLVING TO EVERY PROJECT. MY GOAL IS TO COMBINE
+          DESIGN AND FUNCTIONALITY TO BUILD WEB SOLUTIONS THAT STAND OUT AND
+          PERFORM SEAMLESSLY.
+        </p>
+        <Button title="KNOW MORE" />
       </div>
     </div>
   );
