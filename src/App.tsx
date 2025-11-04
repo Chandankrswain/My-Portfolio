@@ -24,6 +24,7 @@ export default function App() {
         heading="PROJECTS GALLERY"
       />
       <Projects />
+      
     </div>
   );
 }
