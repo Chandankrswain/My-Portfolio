@@ -6,3 +6,5 @@ export * from "./avatarmodel";
 export * from "./quotes";
 export * from "./heading";
 export * from "./card";
+export * from "./project-thumbnail";
+export * from "./project-card";
