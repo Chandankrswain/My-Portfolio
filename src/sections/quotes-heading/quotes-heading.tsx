@@ -20,5 +20,5 @@ export const QuotesHeading = () => {
     </div>
   );
 };
-//Solving real problems with elegant interfaces.
+
 export default QuotesHeading;
