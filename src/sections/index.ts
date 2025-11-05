@@ -3,3 +3,4 @@ export * from "./herosection";
 export * from "./skills";
 export * from "./quotes-section";
 export * from "./projects";
+export * from "./quotes-heading";

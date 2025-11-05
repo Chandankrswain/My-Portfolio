@@ -3,6 +3,7 @@ import {
   About,
   HeroSection,
   Projects,
+  QuotesHeading,
   QuotesSection,
   Skills,
 } from "./sections";
@@ -25,6 +26,7 @@ export default function App() {
       />
       <Projects />
       <ProgressBar />
+      <QuotesHeading />
     </div>
   );
 }
