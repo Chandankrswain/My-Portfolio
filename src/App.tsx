@@ -1,4 +1,4 @@
-import { Footer, Heading, ProgressBar, Quotes } from "./components";
+import { Footer, Form, Heading, ProgressBar, Quotes } from "./components";
 import {
   About,
   HeroSection,
@@ -31,6 +31,7 @@ export default function App() {
         classname="bg-yellow-400 text-9xl text-[#141414] p-4 skew-y-2 font-black "
         heading="CONTACT NOW"
       />
+      <Form />
       <Footer />
     </div>
   );

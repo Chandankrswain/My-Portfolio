@@ -1,0 +1,9 @@
+<svg width="160" height="160" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Chat messages outline</title>
+  <!-- smaller bubble (top left) -->
+  <path d="M8 10h28a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H20l-6 6v-6H8a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4z"
+        fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round"/>
+  <!-- larger bubble (bottom right) -->
+  <path d="M20 28h30a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H34l-6 6v-6H20a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4z"
+        fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round"/>
+</svg>

@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <div className="mt-40">
+    <div className="mt-10">
       <p className="text-[250px] text-[#adadad] text-center font-bold">
         @IM.CKAY
       </p>
