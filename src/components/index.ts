@@ -8,3 +8,4 @@ export * from "./heading";
 export * from "./card";
 export * from "./project-thumbnail";
 export * from "./project-card";
+export * from "./progress-bar";

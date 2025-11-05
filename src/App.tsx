@@ -1,4 +1,4 @@
-import { Heading, Quotes } from "./components";
+import { Heading, ProgressBar, Quotes } from "./components";
 import {
   About,
   HeroSection,
@@ -24,7 +24,7 @@ export default function App() {
         heading="PROJECTS GALLERY"
       />
       <Projects />
-      
+      <ProgressBar />
     </div>
   );
 }
