@@ -3,7 +3,7 @@ import { Button } from "../../components";
 export const QuotesHeading = () => {
   return (
     <div>
-      <div className="flex flex-end w-full justify-between p-10">
+      <div className="flex flex-end w-full justify-between p-10 mb-38">
         <div className="w-full flex">
           <Button title="LINKEDIN" />
           <Button title="GITHUB" />
