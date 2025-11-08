@@ -3,7 +3,7 @@ import menudots from "../../assets/menudots.svg";
 import { Button } from "../button";
 import { useState } from "react";
 import Menu from "../menu/menu";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -30,11 +30,14 @@ export const Navbar = () => {
       />
 
       <Button title="RESUME" />
-      {isActive && (
-        <div className="fixed inset-0 z-50">
-          <Menu onClose={() => setIsActive(false)} />
-        </div>
-      )}
+
+      <AnimatePresence>
+        {isActive && (
+          <div className="fixed inset-0 z-50">
+            <Menu onClose={() => setIsActive(false)} />
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
