@@ -11,10 +11,9 @@ export const Menu = ({ onClose }: Props) => {
       animate={{ y: 0, opacity: 1 }} // slides into view
       exit={{ y: "-100%", opacity: 0 }} // exits down
       transition={{
-        type: "spring", // smooth & bouncy motion
-        stiffness: 70,
+        type: "spring",
         damping: 16,
-        duration: 0.8,
+        duration: 0.3,
       }}
       className="flex flex-col items-center justify-center bg-[#141414] h-screen text-white relative overflow-hidden"
     >
