@@ -29,7 +29,7 @@ export const Navbar = () => {
 
       <motion.img
         whileHover={{ rotate: 45 }}
-        transition={{ duration: 0.2, ease: "easeInOut" }} // smooth animation
+        transition={{ duration: 0.2, ease: "easeInOut" }}
         className="mr-6 cursor-none"
         src={menudots}
         alt="Menu"

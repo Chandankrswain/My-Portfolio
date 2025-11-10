@@ -18,34 +18,34 @@ export const HeroSection = () => {
         </h4>
         <div className="flex justify-center flex-col">
           <motion.p
-            initial={{ y: "30px", opacity: 0 }}
+            initial={{ y: "50px", opacity: 0 }}
             animate={{ y: "0px", opacity: 1 }}
             transition={{
               type: "tween",
-              ease: "easeOut",
+              ease: "easeIn",
               delay: 0.3,
             }}
             className="text-9xl font-black"
           >
             CHANDAN KR.
           </motion.p>
-          <motion.p
-            initial={{ y: "30px", opacity: 0 }}
+          <motion.div
+            initial={{ y: "50px", opacity: 0 }}
             animate={{ y: "0px", opacity: 1 }}
             transition={{
               type: "tween",
-              ease: "easeOut",
+              ease: "easeIn",
               delay: 0.5,
             }}
-            className="text-9xl font-black"
+            className="text-9xl font-black  "
           >
             SWAIN
-          </motion.p>
+          </motion.div>
         </div>
       </div>
       <motion.div
-        initial={{ y: "100px" }}
-        animate={{ y: "0px" }}
+        initial={{ y: "30px", opacity: 0 }}
+        animate={{ y: "0px", opacity: 1 }}
         transition={{
           type: "tween",
           ease: "linear",
