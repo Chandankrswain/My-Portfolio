@@ -3,12 +3,12 @@ import { Navbar } from "../../components";
 
 export const HeroSection = () => {
   return (
-    <div className="flex flex-col h-[780px] justify-between">
+    <div className="flex flex-col h-[780px] justify-between cursor-none">
       <Navbar />
       <div className="flex flex-col justify-center items-center">
         <h4 className="flex">
           <img
-            className="mr-2"
+            className="mr-2 cursor-none"
             src={online}
             alt="online"
             width={14}

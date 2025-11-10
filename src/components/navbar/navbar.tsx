@@ -13,7 +13,7 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="h-20 p-14 flex justify-between items-center relative">
+    <div className="h-20 p-14 flex justify-between items-center relative ">
       <h2 className="flex">
         <Time />
       </h2>
@@ -21,7 +21,7 @@ export const Navbar = () => {
       <motion.img
         whileHover={{ rotate: 45 }}
         transition={{ duration: 0.2, ease: "easeInOut" }} // smooth animation
-        className="mr-6 cursor-pointer"
+        className="mr-6 cursor-none"
         src={menudots}
         alt="Menu"
         onClick={handleClick}
