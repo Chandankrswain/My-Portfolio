@@ -13,7 +13,16 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="h-20 p-14 flex justify-between items-center relative ">
+    <motion.div
+      initial={{ y: "-100px" }}
+      animate={{ y: "0px" }}
+      transition={{
+        type: "tween",
+        ease: "linear",
+        delay: 0.8,
+      }}
+      className="h-20 p-14 flex justify-between items-center relative "
+    >
       <h2 className="flex">
         <Time />
       </h2>
@@ -38,7 +47,7 @@ export const Navbar = () => {
           </div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 };
 

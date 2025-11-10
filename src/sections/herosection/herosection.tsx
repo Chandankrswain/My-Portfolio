@@ -1,6 +1,6 @@
 import online from "../../assets/online.svg";
 import { Navbar } from "../../components";
-
+import { motion } from "framer-motion";
 export const HeroSection = () => {
   return (
     <div className="flex flex-col h-[780px] justify-between cursor-none">
@@ -17,11 +17,42 @@ export const HeroSection = () => {
           AVAILABLE FOR WORK
         </h4>
         <div className="flex justify-center flex-col">
-          <p className="text-9xl font-black">CHANDAN KR.</p>
-          <p className="text-9xl font-black">SWAIN</p>
+          <motion.p
+            initial={{ y: "30px", opacity: 0 }}
+            animate={{ y: "0px", opacity: 1 }}
+            transition={{
+              type: "tween",
+              ease: "easeOut",
+              delay: 0.3,
+            }}
+            className="text-9xl font-black"
+          >
+            CHANDAN KR.
+          </motion.p>
+          <motion.p
+            initial={{ y: "30px", opacity: 0 }}
+            animate={{ y: "0px", opacity: 1 }}
+            transition={{
+              type: "tween",
+              ease: "easeOut",
+              delay: 0.5,
+            }}
+            className="text-9xl font-black"
+          >
+            SWAIN
+          </motion.p>
         </div>
       </div>
-      <div className="flex justify-between p-10">
+      <motion.div
+        initial={{ y: "100px" }}
+        animate={{ y: "0px" }}
+        transition={{
+          type: "tween",
+          ease: "linear",
+          delay: 0.8,
+        }}
+        className="flex justify-between p-10"
+      >
         <p className="text-xl font-light p-6 text-white">
           &gt; BASED IN INDIA, NEW DELHI
         </p>
@@ -29,7 +60,7 @@ export const HeroSection = () => {
           &gt; FRONT END DEVELOPER{" "}
           <span className="text-[#ababab]">+ WEB DEVELOPER</span>
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 };
