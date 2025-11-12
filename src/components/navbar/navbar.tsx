@@ -12,6 +12,13 @@ export const Navbar = () => {
     setIsActive((prev) => !prev);
   };
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/files/Resume.pdf";
+    link.download = "Chandan_Kumar_Swain_Resume.pdf";
+    link.click();
+  };
+
   return (
     <motion.div
       initial={{ y: "-100px" }}
@@ -38,7 +45,7 @@ export const Navbar = () => {
         height={60}
       />
 
-      <Button title="RESUME" />
+      <Button title="RESUME" onClick={handleDownload} />
 
       <AnimatePresence>
         {isActive && (
