@@ -9,7 +9,7 @@ export const Quotes = () => {
           initial={{ scale: 0 }}
           whileHover={{ backgroundColor: "orange", color: "#141414", scale: 1 }}
           transition={{ duration: 0 }}
-          className="text-[#adadad] rounded-3xl  "
+          className="text-[#adadad]   "
         >
           DESIGN
         </motion.span>{" "}
@@ -21,7 +21,7 @@ export const Quotes = () => {
             scale: 1.1,
           }}
           transition={{ duration: 0, ease: "easeInOut" }}
-          className="text-[#adadad] rounded-3xl "
+          className="text-[#adadad] "
         >
           DESIGN
         </motion.span>
