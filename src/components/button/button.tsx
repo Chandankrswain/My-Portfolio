@@ -2,11 +2,13 @@ import { motion } from "framer-motion";
 
 interface ButtonProps {
   title?: string;
+  onClick?: () => void;
 }
 
-export const Button = ({ title }: ButtonProps) => {
+export const Button = ({ title, onClick }: ButtonProps) => {
   return (
     <motion.button
+      onClick={onClick}
       className="relative px-6 py-3 font-medium text-black bg-white overflow-hidden cursor-none
                  [clip-path:polygon(10px_0%,100%_0%,100%_calc(100%-10px),calc(100%-10px)_100%,0%_100%,0%_10px)]
                  border "
