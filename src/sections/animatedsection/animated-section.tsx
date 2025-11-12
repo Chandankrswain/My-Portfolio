@@ -53,7 +53,7 @@ const variants = {
 export const AnimatedSection = ({
   children,
   variant = "fade-up",
-  delay = 0.4,
+  delay = 0.2,
 }: AnimatedSectionProps) => {
   const animation = variants[variant];
 
