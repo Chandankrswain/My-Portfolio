@@ -11,3 +11,4 @@ export * from "./project-card";
 export * from "./progress-bar";
 export * from "./form";
 export * from "./menu";
+export * from "./project-display-card";
