@@ -1,6 +1,13 @@
 import { Button } from "../../components";
+import { useNavigate } from "react-router-dom";
 
 export const QuotesSection = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/projects");
+  };
+
   return (
     <div className="flex flex-col justify-center w-[80%] items-center mt-20 mb-40 gap-10 mx-auto">
       <p className="text-9xl text-blue-600 font-bold text-center">
@@ -10,7 +17,7 @@ export const QuotesSection = () => {
         EXPLORE A COLLECTION OF PROJECTS THAT REFLECT MY PASSION FOR CLEAN CODE
         MODERN DESIGN AND PRACTICAL WEB SOLUTIONS
       </p>
-      <Button title="EXPLORE MORE" />
+      <Button title="EXPLORE MORE" onClick={handleClick} />
     </div>
   );
 };
