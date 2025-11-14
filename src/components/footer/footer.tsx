@@ -6,7 +6,9 @@ export const Footer = () => {
       </p>
       <div className="flex justify-between mx-20 mb-10">
         <p>Chandan@portfolio:-$ </p>
-        <button>SCROLL TO THE TOP</button>
+        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          SCROLL TO THE TOP
+        </button>
       </div>
     </div>
   );
