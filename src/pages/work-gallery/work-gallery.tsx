@@ -33,7 +33,7 @@ export const WorkGallery = () => {
         <ProjectList
           index="02"
           title="PORTFOLIO"
-          image="/public/images/portfolio.png"
+          image="/images/portfolio.png"
         />
         <ProjectList index="03" title="TYPEZ" image="/images/typez.png" />
         <ProjectList index="04" title="WORDIO" image="/images/wordio.png" />
