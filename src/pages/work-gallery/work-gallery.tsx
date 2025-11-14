@@ -2,10 +2,13 @@ import { motion } from "framer-motion";
 import { Footer, Navbar, ProjectList } from "../../components";
 import pointerSvg from "../../assets/smallcircle.svg";
 import useGetPosition from "../../utils/useGetPosition";
+import { useEffect } from "react";
 
 export const WorkGallery = () => {
   const { x, y } = useGetPosition();
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="cursor-none">
       <Navbar />
