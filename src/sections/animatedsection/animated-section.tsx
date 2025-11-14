@@ -4,6 +4,8 @@ interface AnimatedSectionProps {
   children: React.ReactNode;
   variant?:
     | "fade-up"
+    | "slide-left"
+    | "slide-right"
     | "slide-diagonal"
     | "zoom-in"
     | "blur-in"
@@ -11,6 +13,7 @@ interface AnimatedSectionProps {
     | "rotate-rise"
     | "pop";
   delay?: number;
+  classname?: string;
 }
 
 const variants = {
@@ -48,17 +51,29 @@ const variants = {
     initial: { opacity: 0, scale: 0.85, y: 60 },
     animate: { opacity: 1, scale: 1, y: 0 },
   },
+
+  "slide-left": {
+    initial: { opacity: 0, x: -150 },
+    animate: { opacity: 1, x: 0 },
+  },
+
+  "slide-right": {
+    initial: { opacity: 0, x: 150 },
+    animate: { opacity: 1, x: 0 },
+  },
 };
 
 export const AnimatedSection = ({
   children,
   variant = "fade-up",
   delay = 0.2,
+  classname,
 }: AnimatedSectionProps) => {
   const animation = variants[variant];
 
   return (
     <motion.section
+      className={classname}
       initial={animation.initial}
       whileInView={animation.animate}
       transition={{

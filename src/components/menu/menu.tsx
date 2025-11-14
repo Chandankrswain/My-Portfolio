@@ -1,15 +1,26 @@
 import { motion } from "framer-motion";
+import { useNavigate, useLocation } from "react-router-dom";
 
 interface Props {
   onClose: () => void;
 }
 
 export const Menu = ({ onClose }: Props) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const current = location.pathname; // ← current active route
+
+  const itemClass = (path: string) =>
+    `text-9xl font-black cursor-pointer transition-colors duration-300 ${
+      current === path ? "text-[#FF4D4D]" : "text-white"
+    }`;
+
   return (
     <motion.div
-      initial={{ y: "-100%", opacity: 0 }} // starts above the screen
-      animate={{ y: 0, opacity: 1 }} // slides into view
-      exit={{ y: "-100%", opacity: 0 }} // exits down
+      initial={{ y: "-100%", opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: "-100%", opacity: 0 }}
       transition={{
         type: "spring",
         damping: 16,
@@ -24,16 +35,22 @@ export const Menu = ({ onClose }: Props) => {
         ✕
       </button>
 
-      <p className="text-9xl font-black">
+      <p onClick={() => navigate("/")} className={itemClass("/")}>
         <span className="text-2xl">01 </span>HOME
       </p>
-      <p className="text-9xl font-black">
+
+      <p
+        onClick={() => navigate("/projects")}
+        className={itemClass("/projects")}
+      >
         <span className="text-2xl">02 </span>PROJECTS
       </p>
-      <p className="text-9xl font-black">
+
+      <p onClick={() => navigate("/contact")} className={itemClass("/contact")}>
         <span className="text-2xl">03 </span>CONTACT ME
       </p>
-      <p className="text-9xl font-black">
+
+      <p onClick={() => navigate("/social")} className={itemClass("/social")}>
         <span className="text-2xl">04 </span>SOCIAL
       </p>
     </motion.div>
