@@ -13,7 +13,7 @@ export const ProjectList = ({ image, index, title }: Props) => {
       <p className="text-7xl italic font-thin ml-14 w-full text-left">
         {title}
       </p>
-      <AnimatedSection classname="w-full" variant="pop">
+      <AnimatedSection classname="w-full" variant="slide-left">
         <img
           className="w-full object-cover [clip-path:polygon(30px_0%,100%_0%,100%_calc(100%-30px),calc(100%-30px)_100%,0%_100%,0%_30px)] h-[150px]"
           src={image}

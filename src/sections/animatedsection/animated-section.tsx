@@ -53,7 +53,7 @@ const variants = {
   },
 
   "slide-left": {
-    initial: { opacity: 0, x: -150 },
+    initial: { opacity: 0, x: -30 },
     animate: { opacity: 1, x: 0 },
   },
 
