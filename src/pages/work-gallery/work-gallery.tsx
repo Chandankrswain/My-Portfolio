@@ -8,10 +8,13 @@ import viewSvg from "../../assets/view.svg";
 
 export const WorkGallery = () => {
   const { x, y } = useGetPosition();
-  const [cursorIcon, setCursorIcon] = useState({ icon: pointerSvg, size: 36 }); // default
+
+  const [cursorIcon, setCursorIcon] = useState({ icon: pointerSvg, size: 36 });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div className="cursor-none">
       <Navbar />
@@ -58,6 +61,9 @@ export const WorkGallery = () => {
               size: 36, // back to w-9
             })
           }
+          onClick={() => {
+            window.location.href = "https://navi-delhi-metro.vercel.app/";
+          }}
         />
         <ProjectList
           index="02"
@@ -74,6 +80,9 @@ export const WorkGallery = () => {
               icon: pointerSvg,
               size: 36, // back to w-9
             })
+          }
+          onClick={() =>
+            (window.location.href = "https://wordio-omega.vercel.app/")
           }
         />
         <ProjectList
@@ -92,6 +101,7 @@ export const WorkGallery = () => {
               size: 36, // back to w-9
             })
           }
+          onClick={() => (window.location.href = "https://type-z.vercel.app/")}
         />
         <ProjectList
           index="04"
@@ -109,11 +119,29 @@ export const WorkGallery = () => {
               size: 36, // back to w-9
             })
           }
+          onClick={() =>
+            (window.location.href = "https://wordio-omega.vercel.app/")
+          }
         />
         <ProjectList
           index="05"
           title="SCOUT GAMES"
           image="/images/scoutgames.png"
+          onHoverStart={() =>
+            setCursorIcon({
+              icon: viewSvg,
+              size: 80, // w-20 ~ 80px
+            })
+          }
+          onHoverEnd={() =>
+            setCursorIcon({
+              icon: pointerSvg,
+              size: 36, // back to w-9
+            })
+          }
+          onClick={() =>
+            (window.location.href = "https://scout-games.vercel.app/")
+          }
         />
         <ProjectList
           index="06"
@@ -130,6 +158,9 @@ export const WorkGallery = () => {
               icon: pointerSvg,
               size: 36, // back to w-9
             })
+          }
+          onClick={() =>
+            (window.location.href = "https://todo-list-five-wheat.vercel.app/")
           }
         />
       </div>

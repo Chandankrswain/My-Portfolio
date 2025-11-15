@@ -6,6 +6,7 @@ interface Props {
   image: string;
   onHoverStart?: () => void;
   onHoverEnd?: () => void;
+  onClick?: () => void;
 }
 
 export const ProjectList = ({
@@ -14,6 +15,7 @@ export const ProjectList = ({
   title,
   onHoverEnd,
   onHoverStart,
+  onClick,
 }: Props) => {
   return (
     <div className="flex border-b-1 mx-30 p-10 border-[#adadad]">
@@ -28,6 +30,7 @@ export const ProjectList = ({
           className="w-full object-cover [clip-path:polygon(30px_0%,100%_0%,100%_calc(100%-30px),calc(100%-30px)_100%,0%_100%,0%_30px)] h-[150px]"
           src={image}
           alt=""
+          onClick={onClick}
         />
       </AnimatedSection>
     </div>

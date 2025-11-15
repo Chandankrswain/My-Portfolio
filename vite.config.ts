@@ -11,6 +11,18 @@ export default defineConfig({
       protocolImports: true,
     }),
   ],
+  build: {
+    chunkSizeWarningLimit: 1500,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          three: ["three"],
+          framer: ["framer-motion"],
+          reactVendor: ["react", "react-dom"],
+        },
+      },
+    },
+  },
   define: {
     // 👇 Make `process` available globally
     "process.env": {},
