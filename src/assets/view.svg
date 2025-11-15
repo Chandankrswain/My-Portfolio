@@ -1,10 +1,10 @@
-<svg width="150" height="60" viewBox="0 0 180 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="240" height="90" viewBox="0 0 240 90" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Rounded rectangle -->
   <rect 
     x="0" 
     y="0" 
-    width="180" 
-    height="60" 
+    width="240" 
+    height="90" 
     rx="30" 
     fill="white"
   />
@@ -12,11 +12,11 @@
   <!-- Text "VIEW" -->
   <text 
     x="50%" 
-    y="50%" 
+    y="55%" 
     dominant-baseline="middle" 
     text-anchor="middle" 
     font-family="Arial, sans-serif" 
-    font-size="30" 
+    font-size="60" 
     fill="black"
     font-weight="bold"
   >
