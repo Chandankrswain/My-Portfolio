@@ -82,7 +82,8 @@ export const WorkGallery = () => {
             })
           }
           onClick={() =>
-            (window.location.href = "https://wordio-omega.vercel.app/")
+            (window.location.href =
+              "https://my-portfolio-pi-nine-17.vercel.app/")
           }
         />
         <ProjectList
