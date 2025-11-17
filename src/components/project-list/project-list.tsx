@@ -20,9 +20,7 @@ export const ProjectList = ({
   return (
     <div className="flex border-b-1 mx-30 p-10 border-[#adadad]">
       <p className="text-lg text-left font-thin text-[#adadad]">///{index}</p>
-      <p className="text-7xl italic font-thin ml-14 w-full text-left">
-        {title}
-      </p>
+      <p className="text-7xl font-thin ml-14 w-full text-left">{title}</p>
       <AnimatedSection classname="w-full" variant="slide-left">
         <motion.img
           onHoverStart={onHoverStart}

@@ -15,7 +15,7 @@ export const About = () => {
           DESIGN AND FUNCTIONALITY TO BUILD WEB SOLUTIONS THAT STAND OUT AND
           PERFORM SEAMLESSLY.
         </p>
-        <Button title="KNOW MORE" />
+        <Button title="CONTACT ME" />
       </div>
     </div>
   );
