@@ -160,7 +160,7 @@ export const WorkGallery = () => {
             })
           }
           onClick={() =>
-            (window.location.href = "https://todo-list-five-wheat.vercel.app/")
+            (window.location.href = "https://todo-list-five-wheat.vercel.app/n")
           }
         />
       </div>
