@@ -3,7 +3,7 @@ import { AvatarModel, Button } from "../../components";
 export const About = () => {
   return (
     <div className="h-full flex w-full justify-center items-center mb-48 mt-20">
-      <AvatarModel />
+      {/* <AvatarModel /> */}
       <div className="flex flex-col">
         <p className="text-4xl font-extrabold tracking-widest">
           <span className="text-[#adadad]"> &gt;</span> ABOUT
