@@ -1,4 +1,4 @@
-import { AvatarModel, Button } from "../../components";
+import { Button } from "../../components";
 
 export const About = () => {
   return (
