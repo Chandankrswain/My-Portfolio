@@ -15,8 +15,6 @@
     }
   },
   "dependencies": {
-    "@react-three/drei": "^9.74.0",
-    "@react-three/fiber": "^9.4.0",
     "@readyplayerme/react-avatar-creator": "^0.5.0",
     "@readyplayerme/visage": "^6.16.0",
     "@tailwindcss/vite": "^4.1.16",
@@ -26,7 +24,6 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.9.5",
-    "three": "^0.152.2",
     "util": "^0.12.5",
     "vite-plugin-node-polyfills": "^0.24.0"
   },
