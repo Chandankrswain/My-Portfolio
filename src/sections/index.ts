@@ -4,4 +4,4 @@ export * from "./skills";
 export * from "./quotes-section";
 export * from "./projects";
 export * from "./quotes-heading";
-export * from "./animatedsection";
+export * from "./animatedsection"

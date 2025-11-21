@@ -54,10 +54,6 @@ export default function App() {
           <Projects />
         </AnimatedSection>
 
-        <AnimatedSection variant="blur-in">
-          <ProgressBar />
-        </AnimatedSection>
-
         <AnimatedSection variant="slide-diagonal">
           <QuotesHeading />
         </AnimatedSection>

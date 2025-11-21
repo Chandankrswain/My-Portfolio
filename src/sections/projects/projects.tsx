@@ -1,32 +1,65 @@
-import { ProjectCard } from "../../components";
+import { useState, useRef, useEffect } from "react";
+import { LeftCard } from "./left";
+import { MiddleCard } from "./middle";
+import { RightCard } from "./right";
+import { ProgressBar } from "../../components";
 
 export const Projects = () => {
+  const [activeIndex, setActiveIndex] = useState(1);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  const cards = [<LeftCard />, <MiddleCard />, <RightCard />];
+
+  // Detect scroll position
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const handler = () => {
+      const scrollPos = container.scrollLeft;
+      const cardWidth = container.clientWidth;
+
+      const index = Math.round(scrollPos / cardWidth) + 1;
+      setActiveIndex(index);
+    };
+
+    container.addEventListener("scroll", handler);
+    return () => container.removeEventListener("scroll", handler);
+  }, []);
+
   return (
-    <div className="flex mt-40 p-16 gap-20">
-      <ProjectCard
-        heading="PROJECT [1]"
-        title="NAVI DELHI METRO"
-        textColor="text-[#8a0666]"
-        bgColor="bg-[#ffabea]"
-        bgImage="/images/navi-delhi.png"
-        description="Plan your journey effortlessly with real-time routes, fare details, and metro updates"
-      />
-      <ProjectCard
-        heading="PROJECT [2]"
-        title="WORDIO APP"
-        textColor="text-[#004d40]"
-        bgColor="bg-[#a7ffeb]"
-        bgImage="/images/wordio.png"
-        description="Wordio is a modern and user-friendly Dictionary and Translation App."
-      />
-      <ProjectCard
-        heading="PROJECT [3]"
-        title="TYPEZ APP"
-        textColor="text-[#ffffff]"
-        bgColor="bg-[#6200ea]"
-        bgImage="/images/typez.png"
-        description="TypeZ is designed to boost your speed, accuracy, and efficiency while making typing fun & engaging."
-      />
+    <div className="flex flex-col">
+      <div
+        ref={scrollRef}
+        className="
+          flex mt-20 ml-20
+          overflow-x-scroll 
+          snap-x 
+          snap-mandatory 
+          no-scrollbar 
+          w-full 
+          h-screen 
+          items-center
+        "
+      >
+        {cards.map((CardComponent, i) => (
+          <div
+            key={i}
+            className="
+              snap-start 
+              flex-shrink-0 
+              w-full 
+              h-full 
+              flex 
+              items-center 
+              justify-center
+            "
+          >
+            {CardComponent}
+          </div>
+        ))}
+      </div>
+      <ProgressBar active={activeIndex} total={3} />
     </div>
   );
 };
