@@ -1,0 +1,9 @@
+<!-- save as ck-monogram.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="CK logo">
+  <rect width="100%" height="100%" fill="transparent" />
+  <text x="50%" y="52%" text-anchor="middle" dominant-baseline="middle"
+        font-family="Inter, Arial, Helvetica, sans-serif"
+        font-weight="800" font-size="96" fill="#ffffff" letter-spacing="-4">
+    CK
+  </text>
+</svg>
