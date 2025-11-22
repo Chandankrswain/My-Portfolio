@@ -21,7 +21,8 @@ export default function App() {
         <HeroSection />
 
         <MyPhoto />
-        <AnimatedSection variant="blur-in">
+
+        <AnimatedSection variant="slide-left">
           <Quotes />
         </AnimatedSection>
 
