@@ -1,4 +1,4 @@
-import myphoto from "../../../public/images/photo.jpg";
+import myphoto from "/images/photo.jpg";
 
 export const MyPhoto = () => {
   return (
