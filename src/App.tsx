@@ -1,4 +1,4 @@
-import { Footer, Form, Heading, ProgressBar, Quotes } from "./components";
+import { Footer, Form, Heading, MyPhoto, Quotes } from "./components";
 import useGetPosition from "./utils/useGetPosition";
 import {
   About,
@@ -20,6 +20,7 @@ export default function App() {
       <div className="relative w-screen overflow-hidden cursor-none">
         <HeroSection />
 
+        <MyPhoto />
         <AnimatedSection variant="blur-in">
           <Quotes />
         </AnimatedSection>

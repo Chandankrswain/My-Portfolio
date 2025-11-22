@@ -12,3 +12,4 @@ export * from "./progress-bar";
 export * from "./form";
 export * from "./menu";
 export * from "./project-list";
+export * from "./photo";
