@@ -9,6 +9,7 @@ import vercel from "../../assets/vercel.svg";
 import redux from "../../assets/redux.svg";
 import next from "../../assets/nextjs.svg";
 import tailwind from "../../assets/tailwind-css.svg";
+import motionicon from "../../assets/Icon.png";
 import { motion } from "framer-motion";
 
 export const Skills = () => {
@@ -22,6 +23,7 @@ export const Skills = () => {
     { image: vercel, title: "VERCEL" },
     { image: redux, title: "REDUX" },
     { image: next, title: "NEXTJS" },
+    { image: motionicon, title: "MOTION" },
     { image: tailwind, title: "TAILWIND CSS" },
   ];
 
