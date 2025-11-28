@@ -1,16 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "../button";
 import contact from "../../assets/contact.svg";
+import { Alert } from "../alert";
+import { AnimatedSection } from "../../sections";
 
 export const Form = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  useEffect(() => {
-    if (isSubmitted) {
-      alert("This form is successfully submitted.");
-    }
-  }, [isSubmitted]);
 
   const handleSubmitClick = () => {
     if (formRef.current) {
@@ -23,6 +19,10 @@ export const Form = () => {
     <div className="flex mt-40 px-10 md:px-20 text-white justify-between">
       <div>
         {/* Heading Section */}
+        <AnimatedSection variant="pop">
+          {isSubmitted && <Alert />}
+        </AnimatedSection>
+
         <div className="mb-10">
           <p className="text-5xl font-bold mb-2">GET IN TOUCH!</p>
           <p className="text-2xl font-thin">
@@ -39,12 +39,6 @@ export const Form = () => {
         >
           {/* disable captcha */}
           <input type="hidden" name="_captcha" value="false" />
-
-          <input
-            type="hidden"
-            name="_next"
-            value="http://localhost:5173/thank-you"
-          />
 
           {/* Name */}
           <div className="flex flex-col">
