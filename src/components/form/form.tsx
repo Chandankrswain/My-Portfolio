@@ -1,7 +1,24 @@
+import { useEffect, useRef, useState } from "react";
 import { Button } from "../button";
 import contact from "../../assets/contact.svg";
 
 export const Form = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (isSubmitted) {
+      alert("This form is successfully submitted.");
+    }
+  }, [isSubmitted]);
+
+  const handleSubmitClick = () => {
+    if (formRef.current) {
+      formRef.current.submit();
+      setIsSubmitted(true);
+    }
+  };
+
   return (
     <div className="flex mt-40 px-10 md:px-20 text-white justify-between">
       <div>
@@ -15,19 +32,28 @@ export const Form = () => {
 
         {/* Contact Form */}
         <form
+          ref={formRef}
+          action="https://formsubmit.co/mr.chandanswain@gmail.com"
+          method="POST"
           className="flex flex-col gap-6 max-w-2xl"
-          onSubmit={(e) => {
-            e.preventDefault();
-            alert("MESSAGE SENT");
-          }}
         >
+          {/* disable captcha */}
+          <input type="hidden" name="_captcha" value="false" />
+
+          <input
+            type="hidden"
+            name="_next"
+            value="http://localhost:5173/thank-you"
+          />
+
           {/* Name */}
           <div className="flex flex-col">
             <label className="text-lg font-thin mb-3">NAME</label>
             <input
               type="text"
+              name="name"
               placeholder="Your Name"
-              className="bg-transparent border-1 border-gray-500 focus:border-orange-400 focus:outline-none py-6   px-3 text-lg placeholder-gray-400 transition-all"
+              className="bg-transparent border border-gray-500 focus:border-orange-400 focus:outline-none py-6 px-3 text-lg placeholder-gray-400 transition-all"
               required
             />
           </div>
@@ -37,8 +63,9 @@ export const Form = () => {
             <label className="text-lg font-thin mb-3">EMAIL</label>
             <input
               type="email"
+              name="email"
               placeholder="you@example.com"
-              className="bg-transparent border-1 border-gray-500 focus:border-orange-400 focus:outline-none py-6 px-3 text-lg placeholder-gray-400 transition-all"
+              className="bg-transparent border border-gray-500 focus:border-orange-400 focus:outline-none py-6 px-3 text-lg placeholder-gray-400 transition-all"
               required
             />
           </div>
@@ -47,18 +74,20 @@ export const Form = () => {
           <div className="flex flex-col">
             <label className="text-lg font-thin mb-3">MESSAGE</label>
             <textarea
+              name="message"
               placeholder="Type your message here..."
               rows={5}
-              className="bg-transparent border-1 border-gray-500 focus:border-orange-400 focus:outline-none py-6 px-3 text-lg placeholder-gray-400 resize-none transition-all"
+              className="bg-transparent border border-gray-500 focus:border-orange-400 focus:outline-none py-6 px-3 text-lg placeholder-gray-400 resize-none transition-all"
               required
             />
           </div>
 
           {/* Submit Button */}
-          <Button title="SUBMIT" />
+          <Button title="SUBMIT" onClick={handleSubmitClick} />
         </form>
       </div>
-      <img className="w-[600px] h-[800px] " src={contact} alt="contact" />
+
+      <img className="w-[600px] h-[800px]" src={contact} alt="contact" />
     </div>
   );
 };

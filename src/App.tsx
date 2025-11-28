@@ -19,58 +19,44 @@ export default function App() {
     <>
       <div className="relative w-screen overflow-hidden cursor-none">
         <HeroSection />
-
         <MyPhoto />
-
         <AnimatedSection variant="slide-left">
           <Quotes />
         </AnimatedSection>
-
         <AnimatedSection variant="slide-diagonal">
           <About />
         </AnimatedSection>
-
         <AnimatedSection variant="rotate-rise">
           <Heading
             classname="bg-orange-500 text-9xl text-[#141414] p-4 skew-y-2 font-black "
             heading="SKILLS & EXPERTISE"
           />
         </AnimatedSection>
-
         <AnimatedSection variant="pop">
           <Skills />
         </AnimatedSection>
-
         <AnimatedSection variant="zoom-in">
           <QuotesSection />
         </AnimatedSection>
-
         <AnimatedSection variant="fade-up">
           <Heading
             classname="bg-blue-400 text-9xl text-[#141414] p-4 -skew-y-2 font-black "
             heading="PROJECTS GALLERY"
           />
         </AnimatedSection>
-
         <AnimatedSection variant="zoom-in">
           <Projects />
         </AnimatedSection>
-
-        <AnimatedSection variant="slide-diagonal">
-          <QuotesHeading />
-        </AnimatedSection>
-
+        <QuotesHeading />
         <AnimatedSection variant="rotate-rise">
           <Heading
             classname="bg-yellow-400 text-9xl text-[#141414] p-4 skew-y-2 font-black "
             heading="CONTACT NOW"
           />
         </AnimatedSection>
-
         <AnimatedSection variant="fade-up">
           <Form />
         </AnimatedSection>
-
         <AnimatedSection variant="pop">
           <Footer />
         </AnimatedSection>
