@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Button } from "../button";
 import contact from "../../assets/contact.svg";
 import { Alert } from "../alert";
@@ -40,6 +40,11 @@ export const Form = () => {
           {/* disable captcha */}
           <input type="hidden" name="_captcha" value="false" />
 
+          <input
+            type="hidden"
+            name="_next"
+            value="http://localhost:5173/thank-you"
+          />
           {/* Name */}
           <div className="flex flex-col">
             <label className="text-lg font-thin mb-3">NAME</label>
