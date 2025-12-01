@@ -11,6 +11,7 @@ import {
 } from "./sections";
 import { motion } from "framer-motion";
 import pointerSvg from "./assets/smallcircle.svg";
+import contact from "./assets/contact.svg";
 
 export default function App() {
   const { x, y } = useGetPosition();
@@ -55,7 +56,7 @@ export default function App() {
           />
         </AnimatedSection>
         <AnimatedSection variant="fade-up">
-          <Form />
+          <Form imageSrc={contact} />
         </AnimatedSection>
         <AnimatedSection variant="pop">
           <Footer />

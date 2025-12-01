@@ -1,10 +1,14 @@
 import { useRef, useState } from "react";
 import { Button } from "../button";
-import contact from "../../assets/contact.svg";
+
 import { Alert } from "../alert";
 import { AnimatedSection } from "../../sections";
 
-export const Form = () => {
+interface Props {
+  imageSrc?: string;
+}
+
+export const Form = ({ imageSrc }: Props) => {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -16,7 +20,7 @@ export const Form = () => {
   };
 
   return (
-    <div className="flex mt-40 px-10 md:px-20 text-white justify-between">
+    <div className="flex mt-40 px-10 md:px-20 gap-10 text-white justify-between">
       <div>
         {/* Heading Section */}
         <AnimatedSection variant="pop">
@@ -86,7 +90,7 @@ export const Form = () => {
         </form>
       </div>
 
-      <img className="w-[600px] h-[800px]" src={contact} alt="contact" />
+      <img className="w-[600px] h-[800px]" src={imageSrc} alt="contact" />
     </div>
   );
 };
