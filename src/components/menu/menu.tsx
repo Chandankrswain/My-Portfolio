@@ -49,10 +49,6 @@ export const Menu = ({ onClose }: Props) => {
       <p onClick={() => navigate("/contact")} className={itemClass("/contact")}>
         <span className="text-2xl">03 </span>CONTACT ME
       </p>
-
-      <p onClick={() => navigate("/social")} className={itemClass("/social")}>
-        <span className="text-2xl">04 </span>SOCIAL
-      </p>
     </motion.div>
   );
 };
