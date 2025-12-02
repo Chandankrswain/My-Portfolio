@@ -9,8 +9,8 @@ export const Projects = () => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   const cards = [<LeftCard />, <MiddleCard />, <RightCard />];
+  const total = cards.length;
 
-  // Detect scroll position
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
@@ -19,7 +19,9 @@ export const Projects = () => {
       const scrollPos = container.scrollLeft;
       const cardWidth = container.clientWidth;
 
-      const index = Math.round(scrollPos / cardWidth) + 1;
+      let index = Math.round(scrollPos / cardWidth) + 1;
+      index = Math.max(1, Math.min(index, total)); // clamp value
+
       setActiveIndex(index);
     };
 
@@ -28,18 +30,19 @@ export const Projects = () => {
   }, []);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col overflow-x-hidden">
       <div
         ref={scrollRef}
         className="
-          flex mt-20 ml-20
+          flex mt-20 ml-0 md:ml-20
           overflow-x-scroll 
-          snap-x 
+          snap-x
           snap-mandatory 
           no-scrollbar 
           w-full 
           h-screen 
           items-center
+          gap-6
         "
       >
         {cards.map((CardComponent, i) => (
@@ -48,18 +51,24 @@ export const Projects = () => {
             className="
               snap-start 
               flex-shrink-0 
-              w-full 
+              w-screen 
+              max-w-screen 
+              md:w-full 
               h-full 
               flex 
               items-center 
-              justify-center
+              justify-center 
+              overflow-hidden
             "
           >
-            {CardComponent}
+            <div className="w-full max-w-full overflow-hidden px-4">
+              {CardComponent}
+            </div>
           </div>
         ))}
       </div>
-      <ProgressBar active={activeIndex} total={3} />
+
+      <ProgressBar active={activeIndex} total={total} />
     </div>
   );
 };

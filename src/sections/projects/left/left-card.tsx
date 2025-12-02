@@ -9,7 +9,7 @@ export const LeftCard = () => {
         textColor="text-[#8a0666]"
         bgColor="bg-[#ffabea]"
         bgImage="/images/navi-delhi.png"
-        description="Plan your journey effortlessly with real-time routes, fare details, and metro updates"
+        description="Navi Delhi Metro Plan your journey effortlessly with real-time routes, fare details, and metro updates"
       />
     </div>
   );
