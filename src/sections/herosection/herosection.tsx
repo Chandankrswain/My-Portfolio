@@ -16,7 +16,7 @@ export const HeroSection = () => {
           />
           AVAILABLE FOR WORK
         </h4>
-        <div className="flex justify-center flex-col">
+        <div className="flex justify-center items-start flex-col p-8 md:p-0">
           <motion.p
             initial={{ y: "50px", opacity: 0 }}
             animate={{ y: "0px", opacity: 1 }}
@@ -25,7 +25,7 @@ export const HeroSection = () => {
               ease: "easeIn",
               delay: 0.3,
             }}
-            className="text-9xl font-black"
+            className="text-7xl md:text-9xl font-black"
           >
             CHANDAN KR.
           </motion.p>
@@ -37,7 +37,7 @@ export const HeroSection = () => {
               ease: "easeIn",
               delay: 0.5,
             }}
-            className="text-9xl font-black  "
+            className="text-7xl md:text-9xl font-black  "
           >
             SWAIN
           </motion.div>
@@ -51,7 +51,7 @@ export const HeroSection = () => {
           ease: "linear",
           delay: 0.8,
         }}
-        className="flex justify-between p-10"
+        className="flex flex-col md:flex-row md:justify-between p-0 md:p-10"
       >
         <p className="text-xl font-light p-6 text-white">
           &gt; BASED IN INDIA, NEW DELHI

@@ -12,10 +12,22 @@ import {
 import { motion } from "framer-motion";
 import pointerSvg from "./assets/smallcircle.svg";
 import contact from "./assets/contact.svg";
+import { useEffect, useState } from "react";
 
 export default function App() {
+  const [isMobile, setIsMobile] = useState(false); // default false
   const { x, y } = useGetPosition();
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // mobile breakpoint
+    };
+
+    handleResize(); // run on mount
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <>
       <div className="relative w-screen overflow-hidden cursor-none">
@@ -64,20 +76,22 @@ export default function App() {
       </div>
 
       {/* Pointer Cursor */}
-      <motion.img
-        src={pointerSvg}
-        alt="Pointer"
-        className="pointer-events-none fixed top-0 left-0 w-9 h-9 z-[9999]"
-        animate={{
-          x: x - 15,
-          y: y - 10,
-        }}
-        transition={{
-          type: "tween",
-          ease: "linear",
-          duration: 0.01,
-        }}
-      />
+      {!isMobile && (
+        <motion.img
+          src={pointerSvg}
+          alt="Pointer"
+          className="pointer-events-none fixed top-0 left-0 w-9 h-9 z-[9999]"
+          animate={{
+            x: x - 15,
+            y: y - 10,
+          }}
+          transition={{
+            type: "tween",
+            ease: "linear",
+            duration: 0.01,
+          }}
+        />
+      )}
     </>
   );
 }

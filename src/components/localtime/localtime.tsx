@@ -12,9 +12,12 @@ const Time = () => {
   }, []);
 
   return (
-    <div className="flex text-xl">
-      <h1 className="text-[#ababab]">&gt; LOCAL</h1> <span>/</span>
-      <p className="font-thin">{currentTime.toLocaleTimeString()}</p>
+    <div className="flex md:text-xl hidden md:block ">
+      <h1 className="text-[#ababab] md:inline-block">&gt; LOCAL</h1>
+      <span>/</span>
+      <p className="font-thin md:inline-block">
+        {currentTime.toLocaleTimeString()}
+      </p>
     </div>
   );
 };

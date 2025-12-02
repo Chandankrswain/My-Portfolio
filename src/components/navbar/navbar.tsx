@@ -28,11 +28,9 @@ export const Navbar = () => {
         ease: "linear",
         delay: 0.8,
       }}
-      className="h-20 p-14 flex justify-between items-center relative "
+      className="h-20 my-6 px-7 md:p-14 flex justify-between items-center relative "
     >
-      <h2 className="flex">
-        <Time />
-      </h2>
+      <Time />
 
       <motion.img
         whileHover={{ rotate: 45 }}
