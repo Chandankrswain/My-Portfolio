@@ -34,7 +34,7 @@ export const Menu = ({ onClose }: Props) => {
       >
         ✕
       </button>
-      <div className="flex flex-col p-2 gap-6 items-c justify-center ">
+      <div className="flex flex-col p-2 md:p-10 gap-6 items-start md:items-center justify-center ">
         <p onClick={() => navigate("/")} className={itemClass("/")}>
           <span className="text-xl md:text-2xl">01 </span>HOME
         </p>
