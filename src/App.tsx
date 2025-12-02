@@ -63,7 +63,7 @@ export default function App() {
         <QuotesHeading />
         <AnimatedSection variant="rotate-rise">
           <Heading
-            classname="bg-yellow-400 text-9xl text-[#141414] p-4 skew-y-2 font-black "
+            classname="bg-yellow-400 text-[31px] md:text-9xl text-[#141414] p-4 skew-y-2 font-black "
             heading="CONTACT NOW"
           />
         </AnimatedSection>

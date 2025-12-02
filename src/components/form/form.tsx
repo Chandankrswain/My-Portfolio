@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "../button";
 
 import { Alert } from "../alert";
@@ -9,6 +9,7 @@ interface Props {
 }
 
 export const Form = ({ imageSrc }: Props) => {
+  const [isMobile, setIsMobile] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -18,9 +19,19 @@ export const Form = ({ imageSrc }: Props) => {
       setIsSubmitted(true);
     }
   };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // mobile breakpoint
+    };
+
+    handleResize(); // run on mount
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
-    <div className="flex mt-40 px-10 md:px-20 gap-10 text-white justify-between">
+    <div className="flex mt-20 md:mt-40 px-10 md:px-20 gap-10 text-white justify-between">
       <div>
         {/* Heading Section */}
         <AnimatedSection variant="pop">
@@ -90,7 +101,9 @@ export const Form = ({ imageSrc }: Props) => {
         </form>
       </div>
 
-      <img className="w-[600px] h-[800px]" src={imageSrc} alt="contact" />
+      {!isMobile && (
+        <img className="w-[600px] h-[800px]" src={imageSrc} alt="contact" />
+      )}
     </div>
   );
 };
