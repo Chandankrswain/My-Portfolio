@@ -41,7 +41,7 @@ export default function App() {
         </AnimatedSection>
         <AnimatedSection variant="rotate-rise">
           <Heading
-            classname="bg-orange-500 text-9xl text-[#141414] p-4 skew-y-2 font-black "
+            classname="bg-orange-500 text-[31px] md:text-9xl text-[#141414] p-4 skew-y-2 font-black "
             heading="SKILLS & EXPERTISE"
           />
         </AnimatedSection>

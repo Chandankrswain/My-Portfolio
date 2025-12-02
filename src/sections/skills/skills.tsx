@@ -28,7 +28,7 @@ export const Skills = () => {
   ];
 
   return (
-    <div className="flex p-10 mt-30 flex-wrap overflow-hidden w-screen">
+    <div className="flex md:p-10 mt-20 md:mt-30 flex-wrap items-center justify-center overflow-hidden ">
       {skills.map((skill, index) => (
         <motion.div
           initial={{ scale: 0.9 }}
