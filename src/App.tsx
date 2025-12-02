@@ -45,9 +45,9 @@ export default function App() {
             heading="SKILLS & EXPERTISE"
           />
         </AnimatedSection>
-        <AnimatedSection variant="pop">
-          <Skills />
-        </AnimatedSection>
+
+        <Skills />
+
         <AnimatedSection variant="zoom-in">
           <QuotesSection />
         </AnimatedSection>

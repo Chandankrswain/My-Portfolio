@@ -11,6 +11,7 @@ import next from "../../assets/nextjs.svg";
 import tailwind from "../../assets/tailwind-css.svg";
 import motionicon from "../../assets/Icon.png";
 import { motion } from "framer-motion";
+import { AnimatedSection } from "../animatedsection";
 
 export const Skills = () => {
   const skills = [
@@ -41,7 +42,9 @@ export const Skills = () => {
           transition={{ type: "spring", stiffness: 300, damping: 15 }}
           className=" flex flex-col items-center justify-center"
         >
-          <Card title={skill.title} image={skill.image} />
+          <AnimatedSection variant="pop">
+            <Card title={skill.title} image={skill.image} />
+          </AnimatedSection>
         </motion.div>
       ))}
     </div>
