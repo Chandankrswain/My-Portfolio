@@ -18,14 +18,18 @@ export const ProjectList = ({
   onClick,
 }: Props) => {
   return (
-    <div className="flex border-b-1 mx-30 p-10 border-[#adadad]">
-      <p className="text-lg text-left font-thin text-[#adadad]">///{index}</p>
-      <p className="text-7xl font-thin ml-14 w-full text-left">{title}</p>
-      <AnimatedSection classname="w-full" variant="slide-left">
+    <div className="flex flex-col md:flex-row gap-3 border-b-1 md:mx-30 p-4 md:p-10 border-[#adadad]">
+      <p className="md:text-lg text-left font-thin text-[#adadad]">
+        ///{index}
+      </p>
+      <p className="text-xl md:text-7xl font-thin ml-14 w-full text-left">
+        {title}
+      </p>
+      <AnimatedSection classname="md:w-full" variant="slide-left">
         <motion.img
           onHoverStart={onHoverStart}
           onHoverEnd={onHoverEnd}
-          className="w-full object-cover [clip-path:polygon(30px_0%,100%_0%,100%_calc(100%-30px),calc(100%-30px)_100%,0%_100%,0%_30px)] h-[150px]"
+          className="md:w-full object-cover [clip-path:polygon(30px_0%,100%_0%,100%_calc(100%-30px),calc(100%-30px)_100%,0%_100%,0%_30px)] h-[150px]"
           src={image}
           alt=""
           onClick={onClick}

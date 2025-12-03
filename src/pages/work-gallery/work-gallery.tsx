@@ -7,44 +7,53 @@ import { AnimatedSection } from "../../sections";
 import viewSvg from "../../assets/view.svg";
 
 export const WorkGallery = () => {
+  const [isMobile, setIsMobile] = useState(false); // default false
   const { x, y } = useGetPosition();
 
   const [cursorIcon, setCursorIcon] = useState({ icon: pointerSvg, size: 36 });
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // mobile breakpoint
+    };
+
+    handleResize(); // run on mount
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <div className="cursor-none">
       <Navbar />
 
-      <div className="flex flex-col mt-30 items-end p-10">
+      <div className="flex flex-col md:mt-30 items-start p-5 md:p-10">
         <AnimatedSection variant="slide-right">
-          <p className="text-2xl font-thin text-[#adadad] m-6">
+          <p className="md:text-2xl font-thin text-[#adadad] m-2 md:m-6">
             (2025-PRESENT)
           </p>
         </AnimatedSection>
 
-        <div className="flex justify-end items-end ">
+        <div className="flex flex-col gap-3 md:flex-row justify-end items-end ">
+          <AnimatedSection variant="pop">
+            <p className="text-6xl md:text-[180px] md:leading-36 font-extrabold">
+              SELECTED PROJECTS
+            </p>
+          </AnimatedSection>
           <AnimatedSection variant="slide-left">
-            <p className="text-xl text-[#adadad] ">
+            <p className="text-lg md:text-xl text-[#adadad] ">
               A curated set of projects that show how I design, build, and
               structure modern web experiences. Each project demonstrates my
               focus on clean interfaces and smooth user interactions.
             </p>
           </AnimatedSection>
-
-          <AnimatedSection variant="pop">
-            <p className="text-[180px] leading-36 font-extrabold">
-              SELECTED PROJECTS
-            </p>
-          </AnimatedSection>
         </div>
       </div>
 
-      <div className="mt-35">
-        <p className="text-[#adadad] mx-30 mb-10">PROJECTS LIST</p>
+      <div className="md:mt-35 p-5">
+        <p className="text-[#adadad]  md:mx-30 mb-10">** PROJECTS LIST **</p>
         <ProjectList
           index="01"
           title="NAVI DELHI METRO"
@@ -166,14 +175,16 @@ export const WorkGallery = () => {
         />
       </div>
       <Footer />
-      <motion.img
-        src={cursorIcon.icon}
-        style={{ width: cursorIcon.size, height: cursorIcon.size }} // dynamic size
-        alt="Pointer"
-        className="pointer-events-none fixed top-0 left-0 z-[9999]"
-        animate={{ x: x - cursorIcon.size / 2, y: y - cursorIcon.size / 2 }}
-        transition={{ type: "tween", ease: "linear", duration: 0.01 }}
-      />
+      {!isMobile && (
+        <motion.img
+          src={cursorIcon.icon}
+          style={{ width: cursorIcon.size, height: cursorIcon.size }} // dynamic size
+          alt="Pointer"
+          className="pointer-events-none fixed top-0 left-0 z-[9999]"
+          animate={{ x: x - cursorIcon.size / 2, y: y - cursorIcon.size / 2 }}
+          transition={{ type: "tween", ease: "linear", duration: 0.01 }}
+        />
+      )}
     </div>
   );
 };
